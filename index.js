@@ -13,7 +13,7 @@ function save() {
   `;
     console.log(newThreadParagraph);
 
-    const listItem = document.createElement("li");
+    const listItem = document.createElement("P");
               var nodeThread = document.createTextNode(newThreadParagraph);
                     listItem.appendChild(nodeThread);
                     document

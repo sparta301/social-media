@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Bree+Serif+Marker|Righteous" rel="stylesheet">
+    <link rel="stylesheet"
+    href="node_modules/material-components-web/dist/material-components-web.css">
     <link href="home.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="animate.css">
     <link rel="shortcut icon" href="disebar-icon.png" type="image/x-icon">
@@ -25,13 +27,23 @@
     <div class="container">
         <div class="panel-body">
             <div id="thread-form">
-                <div class="form-group">+Create your Own Discussion
-                <input type="text-area" id="thread">
+                <div class="mdc-textfield mdc-textfield--fullwidth">
+                    <input class="mdc-textfield__input"
+                           type="text"
+                           placeholder="Your Discussion Name"
+                           aria-label="Full-Width Textfield">
+                  </div>
+                  <div class="mdc-textfield mdc-textfield--multiline mdc-textfield--fullwidth">
+                    <textarea id="thread" class="mdc-textfield__input"
+                              placeholder="Discussion About"
+                              rows="8" cols="40"
+                              aria-label="Full-Width multiline textfield"></textarea>
+                  </div>
                 <button onclick="save()">Create</button>
             </div>
             </div>
             <div id="result">
-                    <h2>New Thread :</h1>
+                    <h2>Your Discussion :</h1>
                         <ul id=threadResult> </ul>
                     </div>  
         </div>
